@@ -9,9 +9,8 @@ public class MainRun {
 
         Agent agent = new Agent();
         House agentInstance = agent.getInstance(new ZhangSan());
+        agentInstance.say();
 
-        System.out.println("动态代理对象=" + agentInstance.getClass().getName());
-        agentInstance.buyHouse();
 
     }
 }

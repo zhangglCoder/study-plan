@@ -5,9 +5,8 @@ package cn.zpro.study.proxy;
  */
 public interface House {
 
-    /**
-     * 购房
-     */
     void buyHouse();
+
+    void say();
 
 }

@@ -22,9 +22,10 @@ public class Agent implements InvocationHandler {
     }
 
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-        System.out.println("代理开始");
-        this.target.buyHouse();
-        System.out.println("代理结束");
+        System.out.println("代理对象=" + proxy.getClass().getName());
+        System.out.println("proxy-begin...");
+        method.invoke(target,args);
+        System.out.println("proxy-end...");
         return null;
     }
 
