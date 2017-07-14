@@ -24,9 +24,9 @@ public class Agent implements InvocationHandler {
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         System.out.println("代理对象=" + proxy.getClass().getName());
         System.out.println("proxy-begin...");
-        method.invoke(target,args);
+        Object invokeObj = method.invoke(target, args);
         System.out.println("proxy-end...");
-        return null;
+        return invokeObj;
     }
 
 
