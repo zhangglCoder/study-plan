@@ -11,6 +11,7 @@
     <modules>
         <module>zpro-storage</module>
         <module>zpro-design</module>
+        <module>zpro-mybatis</module>
     </modules>
 
 </project>
