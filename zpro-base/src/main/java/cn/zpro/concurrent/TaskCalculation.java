@@ -1,4 +1,4 @@
-package cn.zpro.concurrent.jdk;
+package cn.zpro.concurrent;
 
 import java.util.concurrent.Callable;
 
@@ -17,7 +17,7 @@ public class TaskCalculation implements Callable<Integer> {
     @Override
     public Integer call() throws Exception {
         String name = Thread.currentThread().getName();
-        System.out.println(name + "開始計算" + (a + b));
+        System.out.println(name + "模拟分布式计算" + (a + b));
         return a + b;
     }
 

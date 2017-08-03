@@ -1,4 +1,4 @@
-package cn.zpro.concurrent.jdk;
+package cn.zpro.concurrent;
 
 
 /**

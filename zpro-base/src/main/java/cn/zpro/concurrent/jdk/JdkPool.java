@@ -1,6 +1,7 @@
 package cn.zpro.concurrent.jdk;
 
-import java.util.concurrent.Executor;
+import cn.zpro.concurrent.TaskCalculation;
+
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
@@ -24,7 +25,7 @@ public class JdkPool {
         ExecutorService executorPool = Executors.newFixedThreadPool(5);
         Future<Integer> future1 = executorPool.submit(new TaskCalculation(1, 2));
         Future<Integer> future2 = executorPool.submit(new TaskCalculation(9, 1));
-        System.out.println("多线程计算总和:"+(future1.get() + future2.get()));
+        System.out.println(Thread.currentThread().getName()+"主线程计算总和:"+(future1.get() + future2.get()));
         executorPool.shutdown();
     }
 }
