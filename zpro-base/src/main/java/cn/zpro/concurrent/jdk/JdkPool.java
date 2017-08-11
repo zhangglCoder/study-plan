@@ -22,7 +22,7 @@ public class JdkPool {
 //        executorPool.execute(new TaskService());
 //        executorPool.shutdown();
 
-        ExecutorService executorPool = Executors.newFixedThreadPool(5);
+        ExecutorService executorPool = Executors.newCachedThreadPool();
         Future<Integer> future1 = executorPool.submit(new TaskCalculation(1, 2));
         Future<Integer> future2 = executorPool.submit(new TaskCalculation(9, 1));
         System.out.println(Thread.currentThread().getName()+"主线程计算总和:"+(future1.get() + future2.get()));
