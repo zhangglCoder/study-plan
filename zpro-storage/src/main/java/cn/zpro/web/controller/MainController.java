@@ -18,6 +18,5 @@ public class MainController {
     public ModelAndView test(){
         poolTaskExecutor.execute(new TaskService());
         return new ModelAndView("test");
-
     }
 }
