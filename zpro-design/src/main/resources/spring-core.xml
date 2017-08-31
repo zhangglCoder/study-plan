@@ -9,4 +9,12 @@
 
     <context:component-scan base-package="cn.zpro" />
 
+
+    <beans>
+        <bean id="zpro" class="cn.zpro.study.spring.UserService">
+            <property name="name" value="123" />
+        </bean>
+    </beans>
+
+
 </beans>

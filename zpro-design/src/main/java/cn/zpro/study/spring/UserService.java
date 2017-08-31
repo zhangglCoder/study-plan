@@ -1,13 +1,30 @@
 package cn.zpro.study.spring;
 
-
-import org.springframework.stereotype.Service;
-
-import javax.annotation.PostConstruct;
-
 public class UserService {
 
-    public void init(){
-        System.out.println(this.getClass().getName());
+    public String name;
+
+    public UserService() {
+
+    }
+
+    public StringBuilder getUserService(){
+        StringBuilder userService = new StringBuilder();
+        return userService;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "UserService{" +
+                "name='" + name + '\'' +
+                '}';
     }
 }
