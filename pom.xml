@@ -13,6 +13,7 @@
         <module>zpro-design</module>
         <module>zpro-mybatis</module>
         <module>zpro-base</module>
+        <module>zpro-boot</module>
     </modules>
 
     <build>
