@@ -14,6 +14,7 @@
         <module>zpro-mybatis</module>
         <module>zpro-base</module>
         <module>zpro-boot</module>
+        <module>zpro-zookeeper</module>
     </modules>
 
     <build>

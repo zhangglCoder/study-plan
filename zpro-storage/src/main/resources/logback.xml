@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<configuration>
+    <!-- ch.qos.logback.core.ConsoleAppender 控制台输出 -->
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>[zpro][%-5level] %d{HH:mm:ss} [%thread] %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!--过滤第三方日志-->
+    <logger name="org.apache" level="WARN"/>
+
+    <!-- 日志级别 -->
+    <root>
+        <level value="debug" />
+        <appender-ref ref="console" />
+    </root>
+
+
+
+</configuration>
