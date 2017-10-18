@@ -3,8 +3,6 @@ package cn.zpro.zookeeper.curator;
 
 import cn.zpro.zookeeper.Constants;
 import org.apache.curator.framework.CuratorFramework;
-import org.apache.curator.framework.api.CuratorEvent;
-import org.apache.curator.framework.api.CuratorListener;
 import org.apache.curator.framework.recipes.cache.*;
 import org.apache.zookeeper.CreateMode;
 
