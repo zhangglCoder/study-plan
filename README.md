@@ -26,7 +26,7 @@
 
 ### 2.Java关键字
 
-![Java关键字](.\images\Java关键字.png)
+![Java关键字](images/Java关键字.png)
 
 
 
@@ -34,7 +34,7 @@
 
 ## 数据类型
 
-![数据结构1](images\数据结构1.png)
+![数据结构1](images/数据结构1.png)
 
 ### 1.基本数据类型
 
@@ -73,7 +73,7 @@ System.out.println(nums[i]);
 >
 > 2.数组变量：只是一个引用变量（不需要初始化数量）
 
-![数组1](images\数组1.jpg)
+![数组1](images/数组1.jpg)
 
 
 
