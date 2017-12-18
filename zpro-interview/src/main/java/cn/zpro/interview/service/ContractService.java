@@ -36,9 +36,12 @@ public class ContractService {
             Calendar instance = Calendar.getInstance();
             instance.setTime(idate);
             instance.add(Calendar.MONTH , paymentMethod);
+            instance.add(Calendar.DATE , -1);
             receipt.setHouseMoneyStartDay(idate);
             receipt.setHouseMoneyEndDay(instance.getTime());
-            receipt.setRent(paymentMethod * monthlyRent);
+            //计算开始时间个结束时间的相隔多少个月
+            ss(receipt.getHouseMoneyStartDay(), monthlyRent, receipt.getHouseMoneyEndDay(),receipt);
+
             receipt.setReceiptOfDate(idate);
             receipt.setYear(instance.get(Calendar.YEAR));
             yearReceiptList.add(receipt);
@@ -46,6 +49,11 @@ public class ContractService {
         }
         return yearReceiptList;
 
+    }
+
+    private void ss(Date start, Double monthlyRent, Date end,YearReceipt receipt) {
+        int mouth = getMouth(start, end);
+        receipt.setRent(mouth * monthlyRent);
     }
 
     /**
