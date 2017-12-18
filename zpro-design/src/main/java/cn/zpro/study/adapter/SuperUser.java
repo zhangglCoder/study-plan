@@ -28,4 +28,23 @@ public class SuperUser {
                 ", name='" + name + '\'' +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof SuperUser)) return false;
+
+        SuperUser superUser = (SuperUser) o;
+
+        if (id != null ? !id.equals(superUser.id) : superUser.id != null) return false;
+        return !(name != null ? !name.equals(superUser.name) : superUser.name != null);
+
+    }
+
+    @Override
+    public int hashCode() {
+        int result = id != null ? id.hashCode() : 0;
+        result = 31 * result + (name != null ? name.hashCode() : 0);
+        return result;
+    }
 }
