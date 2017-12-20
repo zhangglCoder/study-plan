@@ -14,10 +14,25 @@ public class Lesson3 {
     public static void main(String[] args) {
         sun();
     }
-
+    static int x = 0;
     public static void sun(){
 
+        for (int i = 100;i< 999;i++){
+            int b = i/100;        //取得百位数
+            int s = i%100/10;     //取得十位数
+            int g = i%10;        //取得个位数
+            flowel(i,b,s,g);
+        }
+        System.out.println();
+        System.out.println("水仙花数"+x+"个");
     }
+    public static void flowel(int i,int b,int s,int g){
 
+        if(i==Math.pow(b, 3) + Math.pow(s, 3) + Math.pow(g, 3)){
+            x++;    //每次符合水仙花数条件，则x+1;
+            System.out.print(i+" ");    //输出符合条件的数
+        }
+
+    }
 
 }
