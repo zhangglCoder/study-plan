@@ -196,3 +196,10 @@ System.out.println(nums[i]);
       System.out.println("y="+y);
       System.out.println("z="+z);
       }
+
+### 5.JVM内存结构
+
+![JVM内存模型](images\JVM内存模型.jpg)
+
+
+
