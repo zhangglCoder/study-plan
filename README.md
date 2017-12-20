@@ -201,5 +201,7 @@ System.out.println(nums[i]);
 
 ![JVM内存模型](images\JVM内存模型.jpg)
 
+![对象内存图](images\对象内存图.JPG)
+
 
 
