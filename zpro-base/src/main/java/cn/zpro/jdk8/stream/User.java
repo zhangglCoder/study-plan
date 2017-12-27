@@ -15,6 +15,9 @@ public class User {
         this.pid = pid;
     }
 
+    public User() {
+    }
+
     private Integer id;
     private String name;
     private Date createTime;
