@@ -1,11 +1,14 @@
 package cn.zpro.se;
 
+import java.util.Arrays;
+
 public class SearchBin {
 
     public static void main(String[] args) {
         int[] array = {1, 2, 4, 5, 23, 88, 105};
 
-        System.out.println(searchBin(array, 0));
+        System.out.println(Arrays.binarySearch(array,1));
+        System.out.println(searchBin(array, 1));
     }
 
     public static int searchBin(int[] array, int k) {
@@ -20,7 +23,6 @@ public class SearchBin {
             } else {
                 return m;
             }
-            System.out.println("循环次数+1");
         }
         return -1;
     }
