@@ -15,7 +15,7 @@ public class ReserseLinkNode {
         //从第二个节点开始反转
         Node reserseLink = reserseLink(head.getNext());
         head.getNext().setNext(head);
-        //head.setNext(null);
+        head.setNext(null);
         return reserseLink;
 
     }
