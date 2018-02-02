@@ -35,6 +35,5 @@ public class Node {
             System.out.print(head.getValue()+"\t");
             head = head.getNext();
         }
-        System.out.println();
     }
 }
