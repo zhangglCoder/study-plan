@@ -16,6 +16,7 @@
         <module>zpro-boot</module>
         <module>zpro-zookeeper</module>
         <module>zpro-interview</module>
+        <module>zpro-redis</module>
     </modules>
 
     <build>
