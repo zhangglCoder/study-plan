@@ -24,14 +24,36 @@ public class CreateLinkedNode {
      * @return
      */
     public static Node create2(List<Integer> data){
-        Node head = new Node(data.get(0));
-
-        for (Integer i :data){
+        //下一个节点
+        Node prev = null;
+        //头节点
+        Node head = null;
+        for (int i = 0;i< data.size();i++){
+            Node node = new Node(data.get(i));
+            if(prev!=null){
+                prev.setNext(node);
+            }else {
+                head = node;
+            }
+            prev = node;
 
         }
         return head;
     }
     public static void main(String[] args) {
-        Node.printLinked(create2(Arrays.asList(1,2,3,4,5)));
+//        Node.printLinked(create2(Arrays.asList(1,2,3,4,5,100)));
+
+        Node head = null;
+        Node prev = null;
+
+        Node node1 = new Node(1);
+        head = node1;
+        prev = node1;
+        Node node2 = new Node(2);
+        prev.setNext(node2);
+
+//        Node node3 = new Node(3);
+
+
     }
 }
