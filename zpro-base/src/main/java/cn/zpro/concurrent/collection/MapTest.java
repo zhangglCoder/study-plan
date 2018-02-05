@@ -8,11 +8,11 @@ public class MapTest {
 
     public static void main(String[] args) {
         Map<String,String> m = Collections.synchronizedMap(new HashMap<String,String>());
-        m.put("key","val");
-
+        for (int i = 0;i<20;i++){
+            m.put(i+"","test"+i);
+        }
         for (Map.Entry<String,String> mm:m.entrySet()){
-            System.out.println(mm.getKey());
-            System.out.println(mm.getValue());
+            System.out.println(mm.getKey()+"--->"+mm.getValue());
         }
 
 //        for (Object key:m.keySet()){
