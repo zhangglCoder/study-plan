@@ -1,6 +1,7 @@
 package cn.zpro.concurrent.collection;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.CountDownLatch;
@@ -15,7 +16,7 @@ public class ListTest {
 
     public static void main(String[] args) {
         CountDownLatch downLatch = new CountDownLatch(10);
-        List<String> list = new ArrayList<>();
+        List<String> list = Collections.synchronizedList(new ArrayList<>());
         list.add("2");
         list.add("2");
         list.add("11");
