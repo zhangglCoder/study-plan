@@ -1,5 +1,6 @@
 package cn.zpro.web.controller;
 
+import cn.zpro.web.ext.MyViewResolver;
 import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
@@ -11,11 +12,18 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.View;
+import org.springframework.web.servlet.support.RequestContextUtils;
+import org.springframework.web.servlet.view.UrlBasedViewResolver;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.File;
+import java.util.Map;
 
 
 /**
@@ -90,5 +98,26 @@ public class MainController {
             view.setViewName("upload_failure");
         }
         return view;
+    }
+
+    @RequestMapping(value="test2")
+    public ModelAndView test2(ModelAndView mv, HttpServletRequest request,HttpServletResponse response){
+        mv.setViewName("test2");
+        WebApplicationContext webApp= RequestContextUtils.findWebApplicationContext(request, request.getSession().getServletContext());
+        UrlBasedViewResolver viewResolver = webApp.getBean("viewResolver", UrlBasedViewResolver.class);
+        View view = null;
+        try {
+            view = viewResolver.resolveViewName(mv.getViewName(), request.getLocale());
+            MyViewResolver myViewResolver = new MyViewResolver(response);
+            view.render(mv.getModel(),request,myViewResolver);
+            System.out.println(myViewResolver.getStr());
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+
+        mv.addObject("data","data123");
+        return mv;
     }
 }
