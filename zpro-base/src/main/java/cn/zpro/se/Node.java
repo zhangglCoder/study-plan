@@ -30,4 +30,11 @@ public class Node {
         }
         System.out.println();
     }
+
+    public static void main(String[] args) {
+        String str2 = new String("str")+new String("01");
+        String str1 = "str01";
+        str2.intern();
+        System.out.println(str2==str1);
+    }
 }
