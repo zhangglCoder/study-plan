@@ -6,7 +6,8 @@ public class Bit {
 
 
     public static void main(String[] args) {
-        left();
+        double a = 0.1;
+        long b = 1;
     }
 
     /**
@@ -29,5 +30,11 @@ public class Bit {
     private static void right(){
         System.out.println(4>>1); // 4 / (2) = 2
         System.out.println(4>>2); // 4 / (2*2) = 1
+    }
+
+    private static class P{
+        float u;
+        double d;
+
     }
 }

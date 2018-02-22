@@ -2,8 +2,7 @@ package cn.zpro.clazz;
 
 
 public class Persion {
-    public static int parentStaticMethod()
-    {
+    public static int parentStaticMethod() {
         System.out.println("Persion 的静态成员变量");
         return 10;
     }
