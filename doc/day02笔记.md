@@ -170,7 +170,7 @@
 ###13赋值运算符
 	* A: 赋值运算符的使用
 		运算符	运算规则	范例		结果
-		=	赋值		int a=2		2
+		=	赋值		int a=2		    2
 		+=	加后赋值	int a=2，a+=2	4
 		-=	减后赋值	int a=2，a-=2	0
 		*=	乘后赋值	int a=2，a*=2	4
@@ -206,13 +206,13 @@
 			 
 ###15逻辑运算符
 	* A: 逻辑运算符的使用
-		运算符	运算规则	范例		结果
-		&	与		false&true	False
-		|	或		false|true	True
-		^	异或		true^flase	True
-		!	非		!true		Flase
-		&&	短路与		false&&true	False
-		||	短路或		false||true	True
+		运算符	   运算规则	   范例		结果
+		&	与		false&true	         False
+		|	或		false|true	         True
+		^	异或	true^flase	         True
+		!	非		!true		         Flase
+		&&	短路与	false&&true	         False
+		||	短路或	false||true	         True
 
 		规律小结:
 			短路与&&:参与运算的两边数据，有false，则运算结果为false；

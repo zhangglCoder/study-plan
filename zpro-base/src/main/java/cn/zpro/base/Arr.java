@@ -9,10 +9,13 @@ import java.util.Set;
  */
 public class Arr {
 
-    public  static Set<String> set= new HashSet<String>();
+    public  static Set<String> set= new HashSet<>();
     public static void main(String[] args) {
-        boolean compare = compare(new String[]{"1", "2", "2", "3", "3"}, set);
-        System.out.println(set);
+        HashSet<String> strings = new HashSet<>();
+        strings.add("1");
+        strings.add("1");
+        strings.add("1");
+        System.out.println(strings);
     }
     public static boolean compare(String[] strs,Set set){
         boolean result = false;
